@@ -1,0 +1,19 @@
+<h3>Usuarios de la aplicación</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>USUARIO</th>
+            <th>NOMBRE</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each listaDeUsuarios}}
+            <tr>
+                <td>{{ nombreUsuario }}</td>
+                <td>{{ nombreCompleto }}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+<a href="/nuevousuario">Nuevo</a>

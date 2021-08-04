@@ -1,0 +1,29 @@
+<b>Página de inicio de {{ nombreSitio }}</b>
+{{ titulo nombreSitio }}
+<p>Esta es mi pagina de inicio y la uso para probar handlebars</p>
+
+{{#if estaConectado  }}
+<div>
+    <h3>Administración de la página</h3>
+    <h5>Usuario conectado: {{ usuario }}</h5>
+    <a href="/contenido">Administrar contenido</a><br>
+    <a href="/usuarios">Administrar usuarios</a>
+</div>
+{{else}}
+    <hr />
+{{/if}}
+
+{{#unless estaConectado}}
+<div>
+    <b>Inicio de sesion</b><br>
+    Usuario:<br>
+    <input type="text" name="usuario" /><br>
+    Password:<br>
+    <input type="password" name="password" /><br>
+    <input type="submit" />
+</div>
+{{/unless}}
+
+{{ footer }}
+
+{{> firma }}
