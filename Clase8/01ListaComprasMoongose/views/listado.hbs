@@ -1,0 +1,24 @@
+<div>
+    <form method="get">
+        Filtrar:<br>
+        <input type="text" name="filtro" value="{{ filtro }}" />
+        <input type="submit" />
+    </form>
+    <a href="/">Ver todos</a><br><br>
+
+    {{#each lista}}
+        <b>{{ Nombre }}</b> -  Comprado: {{ Comprado }} - <a href="/comprado?id={{_id}}">Marcar como comprado</a> - <a href="/borrar?id={{_id}}">Borrar</a>  <br />
+    {{/each}}
+
+    <hr />
+    <h3>Nuevo item</h3>
+
+    <form method="post">
+        Nombre:<br />
+        <input type="text" name="nombre" /><br />
+        Cantidad: <br />
+        <input type="text" name="cantidad" /><br>
+        <input type="submit" />
+    </form>
+</div>
+<script src="ejemplo.js" type="text/javascript"></script>

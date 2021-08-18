@@ -1,0 +1,1 @@
+alert("Esto es un javascript del cliente");
